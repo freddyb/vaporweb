@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+  <head>
+    <title>vaporweb</title>
+    <!-- insert og: and other meta elements for fun and glamour -->
+    <meta charset="utf-8">
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <blink>
+          <marquee>Welcome To The Vaporweb</marquee>
+        </blink>
+      </h1>
+      <nav>
+      </nav>
+    </header>
+
+    <section>
+      <h4>
+        Cryptography helper. Generate an RSA key pair.
+      </h4>
+      <form method="get" target="self">
+        <keygen challenge="" keytype="RSA">
+        <input type="submit" value="Generate">
+      </form>
+      <script>
+        if (location.search.startsWith("?rsaPublicKey=")) {
+          document.write(`<b>Key:<pre>${location.search.slice(14)}</pre>`);
+        }
+      </script>
+    </section>
+
+    <section>
+      <h4>
+        rotation smile
+      </h4>
+      <span>🙂</span>
+      <!-- todo hack this to rotate with css when using orientation api  -->
+    </section>
+
+    <footer>
+      <small>GPL-3.0, <a href="https://github.com/freddyb/vaporweb">sauce on Github</a></small>
+    </footer>
+  </body>
+
+</html>

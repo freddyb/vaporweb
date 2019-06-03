@@ -21,13 +21,14 @@
       <h4>
         Cryptography helper. Generate an RSA key pair.
       </h4>
-      <form method="get" target="self">
+      <form method="get" target="_self">
         <keygen challenge="" keytype="RSA">
         <input type="submit" value="Generate">
       </form>
       <script>
         if (location.search.startsWith("?rsaPublicKey=")) {
-          document.write(`<b>Key:<pre>${location.search.slice(14)}</pre>`);
+          let key = location.search.match(/[a-zA-Z0-9/+=]+/);
+          document.write(`<b>Key:<pre>${key}</pre>`);
         }
       </script>
     </section>
